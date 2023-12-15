@@ -1,8 +1,9 @@
 FROM php:7.2-fpm
 
 COPY . /var/www/html
-ENV PATH="$PATH:/usr/local/bin"
+COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 RUN composer install
+RUN docker-php-ext-install mysqli pdo pdo_mysql
 
 WORKDIR /var/www/html
 
