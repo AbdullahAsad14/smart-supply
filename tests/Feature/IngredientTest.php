@@ -64,4 +64,35 @@ class IngredientTest extends TestCase
                 ]
             ]);
     }
+
+    /**
+     * Test get ingredients success
+     *
+     * @return void
+     */
+    public function test_get_ingredients_success()
+    {
+        $response = $this->json('GET', '/api/ingredients');
+        $response->assertStatus(200)
+            ->assertJsonStructure([
+                'current_page',
+                'data',
+                'from',
+                'to',
+                'total',
+                'per_page',
+
+            ]);
+    }
+
+    /**
+     * Test get required ingredients success
+     *
+     * @return void
+     */
+    public function test_get_required_ingredients_success()
+    {
+        $response = $this->json('GET', '/api/required-ingredients?order_date=' . Carbon::now()->toDateString());
+        $response->assertStatus(200);
+    }
 }

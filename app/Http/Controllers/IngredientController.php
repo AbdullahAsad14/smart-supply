@@ -32,7 +32,7 @@ class IngredientController extends Controller
      */
     public function index(Request $request): Response
     {
-        $limit = (int)$request->get('limit') ?? 10;
+        $limit = $request->get('limit') ?? 10;
         $ingredients = $this->ingredientService->getAllIngredients($limit);
         return response($ingredients);
     }
