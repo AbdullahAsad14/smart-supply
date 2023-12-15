@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   app:
+    container_name: smart-supply-app
     build: .
     ports:
       - "8080:8080"
@@ -11,6 +12,7 @@ services:
       - mysql
 
   mysql:
+    container_name: smart-supply-db
     image: mysql:5.7
     volumes:
       - mysql_data:/var/lib/mysql

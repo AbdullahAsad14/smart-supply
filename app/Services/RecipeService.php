@@ -31,6 +31,6 @@ class RecipeService
      */
     public function getAllRecipes(int $limit)
     {
-        return Recipe::with('ingredients')->paginate($limit);
+        return Recipe::paginate($limit);
     }
 }
