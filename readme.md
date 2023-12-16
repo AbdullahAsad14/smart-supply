@@ -11,7 +11,7 @@ This readme provides instructions on setting up and running the APIs for this Su
 - Database: MySQL 5.7
 - Containerization: Docker
 
-## ⚙️ Setting Up the Project
+## ⚙️ Setting Up The Project
 
 Clone the project repository from `https://github.com/abdullahasad14/smart-supply`. 
 
@@ -42,6 +42,7 @@ Clone the project repository from `https://github.com/abdullahasad14/smart-suppl
 
 ### ➡️ Without Docker
 1) Run `vendor/bin/phpunit --testdox` to execute the tests.
+
 
 ## 📲 API Endpoints
 
