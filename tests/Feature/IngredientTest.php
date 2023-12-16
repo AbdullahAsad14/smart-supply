@@ -79,7 +79,6 @@ class IngredientTest extends TestCase
                 'to',
                 'total',
                 'per_page',
-
             ]);
     }
 

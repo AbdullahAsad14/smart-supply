@@ -127,4 +127,23 @@ class RecipeTest extends TestCase
                 ]
             ]);
     }
+
+    /**
+     * Test get recipe success
+     *
+     * @return void
+     */
+    public function test_get_recipe_success()
+    {
+        $response = $this->json('GET', '/api/recipes');
+        $response->assertStatus(200)
+            ->assertJsonStructure([
+                'current_page',
+                'data',
+                'from',
+                'to',
+                'total',
+                'per_page',
+            ]);
+    }
 }
