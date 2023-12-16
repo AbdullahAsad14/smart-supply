@@ -1,8 +1,8 @@
-## About Smart Supply
+## 📖 About Smart Supply
 
 This readme provides instructions on setting up and running the APIs for this Supply Smart project, which focuses on streamlining ingredient purchasing and box fulfillment.
 
-## Technologies
+## 💻 Technologies
 
 - Framework: Laravel 6.0
 - Language: PHP 7.2
@@ -204,7 +204,7 @@ This service implements the following REST HTTP endpoints:
 ]
 ```
 
-## Setting Up the Project
+## 🔧 Setting Up the Project
 
 Clone the project repository from `https://github.com/abdullahasad14/smart-supply`. 
 
