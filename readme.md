@@ -46,11 +46,7 @@ Clone the project repository by running `git clone https://github.com/abdullahas
 
 ## 📲 API Endpoints
 
-The API endpoints can be tested via the Postman API Platform which is a free REST client. The API collection for this project can be imported via this link:
-
-`https://api.postman.com/collections/22749262-fe76ee69-5c2d-46ac-8101-617e458d4e24?access_key=PMAT-01HHTCC0JQEAVZMC7X6F739463`
- 
-Following are the details of the REST APIs implemented in this service:
+The API endpoints can be tested via the Postman API Platform which is a free REST client. The Postman API collection for this project can be imported via this [link](https://api.postman.com/collections/22749262-fe76ee69-5c2d-46ac-8101-617e458d4e24?access_key=PMAT-01HHTCC0JQEAVZMC7X6F739463). Following are the details of the REST APIs implemented in this service:
 
 ### 1. Create Ingredient 
 
