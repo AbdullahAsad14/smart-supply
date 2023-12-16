@@ -13,7 +13,7 @@ This readme provides instructions on setting up and running the APIs for this Su
 
 ## ⚙️ Setting Up The Project
 
-Clone the project repository from `https://github.com/abdullahasad14/smart-supply`. 
+Clone the project repository by running `git clone https://github.com/abdullahasad14/smart-supply.git`
 
 **Note**: If you face any permission issues while running the following commands, add `sudo` at the start.
 
