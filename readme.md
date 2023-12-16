@@ -207,6 +207,7 @@ This service implements the following REST HTTP endpoints:
 ## Setting Up the Project
 
 Clone the project repository from `https://github.com/abdullahasad14/smart-supply`. 
+
 **Note**: If you face any permissions issue while running the following commands, add `sudo` at the start.
 
 ### With Docker
