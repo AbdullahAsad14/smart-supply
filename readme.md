@@ -219,11 +219,12 @@ This service implements the following REST HTTP endpoints:
 
 7) Make sure you have PHP, Composer and MySQL installed.
 8) Run `composer install` to install all dependencies.
-9) Update `.env` file to reflect your local MySQL DB configs.
-10) Run `php artisan migrate:refresh --seed` to create tables and seed data.
-11) Run `php artisan serve --port=8080`.
-12) The APIs are now accessible at `http://localhost:8080/`.
+9) Run `cp .env.local .env` to create `.env` file.
+10) Update `.env` file to reflect your local MySQL DB configs.
+11) Run `php artisan migrate:refresh --seed` to create tables and seed data.
+12) Run `php artisan serve --port=8080`.
+13) The APIs are now accessible at `http://localhost:8080/`.
 
 ## Running Tests (Bonus)
-1) Run `docker exec -it smart-supply-app bash`
+1) Run `docker exec -it smart-supply-app bash` to connect via docker container.
 2) Run `vendor/bin/phpunit --testdox` to execute the unit/integration tests.
