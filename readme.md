@@ -227,6 +227,6 @@ Clone the project repository from `https://github.com/abdullahasad14/smart-suppl
 6) Run `php artisan serve --port=8080`.
 7) The APIs are now accessible at `http://localhost:8080/`.
 
-## Running Tests (Bonus)
+## Running Tests
 1) Run `docker exec -it smart-supply-app bash` to connect via docker container.
 2) Run `vendor/bin/phpunit --testdox` to execute the unit/integration tests.
