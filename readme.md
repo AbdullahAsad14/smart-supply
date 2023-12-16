@@ -206,24 +206,25 @@ This service implements the following REST HTTP endpoints:
 
 ## Setting Up the Project
 
-1) Clone the project repository from `https://github.com/abdullahasad14/smart-supply`. 
+Clone the project repository from `https://github.com/abdullahasad14/smart-supply`. 
+**Note**: If you face any permissions issue while running the following commands, add `sudo` at the start.
 
 ### With Docker
 
-3) Make sure you have Docker and Docker Compose installed.
-4) Run `cp .env.local .env` to create `.env` file locally. 
-5) Run `./start.sh` to create docker containers. 
-6) The APIs are now accessible at `http://localhost:8080/`.
+1) Make sure you have Docker and Docker Compose installed.
+2) Run `cp .env.local .env` to create `.env` file locally. 
+3) Run `./start.sh` to create docker containers. 
+4) The APIs are now accessible at `http://localhost:8080/`.
 
 ### Without Docker
 
-7) Make sure you have PHP, Composer and MySQL installed.
-8) Run `composer install` to install all dependencies.
-9) Run `cp .env.local .env` to create `.env` file.
-10) Update `.env` file to reflect your local MySQL DB configs.
-11) Run `php artisan migrate:refresh --seed` to create tables and seed data.
-12) Run `php artisan serve --port=8080`.
-13) The APIs are now accessible at `http://localhost:8080/`.
+1) Make sure you have PHP, Composer and MySQL installed.
+2) Run `composer install` to install all dependencies.
+3) Run `cp .env.local .env` to create `.env` file.
+4) Update `.env` file to reflect your local MySQL DB configs.
+5) Run `php artisan migrate:refresh --seed` to create tables and seed data.
+6) Run `php artisan serve --port=8080`.
+7) The APIs are now accessible at `http://localhost:8080/`.
 
 ## Running Tests (Bonus)
 1) Run `docker exec -it smart-supply-app bash` to connect via docker container.
