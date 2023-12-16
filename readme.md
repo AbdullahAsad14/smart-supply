@@ -181,7 +181,7 @@ This service implements the following REST HTTP endpoints:
 `GET /required-ingredients`
 
 #### Query Parameters:
-- **order_date**: Date (required, needs future date within 7 days)
+- **order_date**: Date (optional, should be a future date)
 - **supplier**: String (optional)
 
 #### Response:
