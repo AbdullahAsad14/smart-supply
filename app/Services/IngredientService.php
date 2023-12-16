@@ -32,7 +32,7 @@ class IngredientService
      */
     public function getRequiredIngredients($data)
     {
-        $orderDate = Carbon::parse($data['order_date']);
+        $orderDate = !empty($data['order_date']) ? Carbon::parse($data['order_date']) : Carbon::now();
         $filters['supplier'] = $data['supplier'] ?? null;
         $filters['start_date'] = $orderDate->toDateString();
         $filters['end_date'] = $orderDate->addDays(CarbonInterface::DAYS_PER_WEEK)->toDateString();

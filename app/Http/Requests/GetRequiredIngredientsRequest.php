@@ -16,7 +16,7 @@ class GetRequiredIngredientsRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'order_date' => 'required|date',
+            'order_date' => 'nullable|date',
             'supplier' => 'nullable|string|max:255',
         ];
     }
@@ -27,7 +27,6 @@ class GetRequiredIngredientsRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'order_date.required' => 'Order date is required.',
             'order_date.date' => 'Order date should be a valid date.',
 
             'supplier.string' => 'Supplier must be a string.',

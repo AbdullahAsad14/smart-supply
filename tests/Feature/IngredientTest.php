@@ -93,4 +93,39 @@ class IngredientTest extends TestCase
         $response = $this->json('GET', '/api/required-ingredients?order_date=' . Carbon::now()->toDateString());
         $response->assertStatus(200);
     }
+
+    /**
+     * Test get required ingredients success without date provided
+     *
+     * @return void
+     */
+    public function test_get_required_ingredients_success_when_date_not_present()
+    {
+        $response = $this->json('GET', '/api/required-ingredients');
+        $response->assertStatus(200);
+    }
+
+    /**
+     * Test get required ingredients failed when wrong date format
+     *
+     * @return void
+     */
+    public function test_get_required_ingredients_failed_when_wrong_date_format_provided()
+    {
+        $response = $this->json('GET', '/api/required-ingredients?order_date=test123');
+        $response->assertStatus(422)
+            ->assertJsonStructure([
+                'success',
+                'message',
+                'data'
+            ])->assertJson([
+                'success' => false,
+                'message' => "Validation errors!",
+                'data' => [
+                    "order_date" => [
+                        "Order date should be a valid date."
+                    ]
+                ]
+            ]);
+    }
 }
