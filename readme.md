@@ -163,16 +163,15 @@ This service implements the following REST HTTP endpoints:
 #### Request:
 ```json5
 {
-    "delivery_date": 1, //Date (required, needs future date)
+    "delivery_date": "2024-01-14", //Date (required, needs future date)
     "recipe_ids": [ 1, 2 ] //Array of Recipes (required, max 4 recipes)
-    
 }
 ```
 #### Response:
 ```json5
 {
     "id": 3,
-    "delivery_date": "2023-12-20",
+    "delivery_date": "2024-01-14",
     "updated_at": "2023-12-15 20:46:08",
     "created_at": "2023-12-15 20:46:08",
 }
