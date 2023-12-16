@@ -229,5 +229,5 @@ Clone the project repository from `https://github.com/abdullahasad14/smart-suppl
 7) The APIs are now accessible at `http://localhost:8080/`.
 
 ## 🧪 Running Tests
-1) Run `docker exec -it smart-supply-app bash` to connect via docker container.
+1) [If project is setup with Docker] Run `docker exec -it smart-supply-app bash` to connect via docker container.
 2) Run `vendor/bin/phpunit --testdox` to execute the unit/integration tests.
