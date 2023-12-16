@@ -1,6 +1,6 @@
 # Smart Supply API
 
-## 📖 About Smart Supply
+## 📖 Project Description
 
 This readme provides instructions on setting up and running the APIs for this Supply Smart project, which focuses on streamlining ingredient purchasing and box fulfillment.
 
