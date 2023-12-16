@@ -11,7 +11,7 @@ This readme provides instructions on setting up and running the APIs for this Su
 - Database: MySQL 5.7
 - Containerization: Docker
 
-## API Endpoints
+## 📲 API Endpoints
 
 This service implements the following REST HTTP endpoints:
 
@@ -206,7 +206,7 @@ This service implements the following REST HTTP endpoints:
 ]
 ```
 
-## 🔧 Setting Up the Project
+## ⚙️ Setting Up the Project
 
 Clone the project repository from `https://github.com/abdullahasad14/smart-supply`. 
 
@@ -229,6 +229,6 @@ Clone the project repository from `https://github.com/abdullahasad14/smart-suppl
 6) Run `php artisan serve --port=8080`.
 7) The APIs are now accessible at `http://localhost:8080/`.
 
-## Running Tests
+## 🧪 Running Tests
 1) Run `docker exec -it smart-supply-app bash` to connect via docker container.
 2) Run `vendor/bin/phpunit --testdox` to execute the unit/integration tests.
