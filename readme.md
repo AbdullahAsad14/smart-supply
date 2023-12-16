@@ -212,14 +212,14 @@ Clone the project repository from `https://github.com/abdullahasad14/smart-suppl
 
 **Note**: If you face any permissions issue while running the following commands, add `sudo` at the start.
 
-### With Docker
+### ➡️ With Docker
 
 1) Make sure you have Docker and Docker Compose installed.
 2) Run `cp .env.local .env` to create `.env` file locally. 
 3) Run `./start.sh` to create docker containers. 
 4) The APIs are now accessible at `http://localhost:8080/`.
 
-### Without Docker
+### ➡️ Without Docker
 
 1) Make sure you have PHP, Composer and MySQL installed.
 2) Run `composer install` to install all dependencies.
