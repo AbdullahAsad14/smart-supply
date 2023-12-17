@@ -5,6 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
+use Symfony\Component\HttpFoundation\Response;
 
 class GetRequiredIngredientsRequest extends FormRequest
 {
@@ -40,6 +41,6 @@ class GetRequiredIngredientsRequest extends FormRequest
             'success'   => false,
             'message'   => 'Validation errors!',
             'data'      => $validator->errors()
-        ], 422));
+        ], Response::HTTP_UNPROCESSABLE_ENTITY));
     }
 }

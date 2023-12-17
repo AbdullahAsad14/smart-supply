@@ -21,7 +21,9 @@ class RecipeService
             'name' => $data['name'],
             'description' => $data['description'],
         ]);
+
         $recipe->ingredients()->attach($recipeIngredients);
+
         return $recipe;
     }
 

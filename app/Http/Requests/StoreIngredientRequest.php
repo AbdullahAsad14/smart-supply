@@ -6,6 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Request;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Contracts\Validation\Validator;
+use Symfony\Component\HttpFoundation\Response;
 
 class StoreIngredientRequest extends FormRequest
 {
@@ -41,6 +42,6 @@ class StoreIngredientRequest extends FormRequest
             'success'   => false,
             'message'   => 'Validation errors!',
             'data'      => $validator->errors()
-        ], 422));
+        ], Response::HTTP_UNPROCESSABLE_ENTITY));
     }
 }

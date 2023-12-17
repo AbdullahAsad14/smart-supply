@@ -28,14 +28,16 @@ class IngredientService
 
     /**
      * @param $data
-     * @return mixed
+     * @return array
      */
-    public function getRequiredIngredients($data)
+    public function getRequiredIngredients($data): array
     {
         $orderDate = !empty($data['order_date']) ? Carbon::parse($data['order_date']) : Carbon::now();
+
         $filters['supplier'] = $data['supplier'] ?? null;
         $filters['start_date'] = $orderDate->toDateString();
         $filters['end_date'] = $orderDate->addDays(CarbonInterface::DAYS_PER_WEEK)->toDateString();
+
         return Ingredient::getRequiredIngredients($filters);
     }
 }

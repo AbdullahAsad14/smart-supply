@@ -3,7 +3,11 @@
 namespace App\Exceptions;
 
 use Exception;
+use Illuminate\Database\QueryException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class Handler extends ExceptionHandler
 {
@@ -29,8 +33,9 @@ class Handler extends ExceptionHandler
     /**
      * Report or log an exception.
      *
-     * @param  \Exception  $exception
+     * @param Exception $exception
      * @return void
+     * @throws Exception
      */
     public function report(Exception $exception)
     {
@@ -40,12 +45,25 @@ class Handler extends ExceptionHandler
     /**
      * Render an exception into an HTTP response.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Exception  $exception
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param Exception $e
+     * @return JsonResponse
+     * @throws Exception
      */
-    public function render($request, Exception $exception)
+    public function render($request, Exception $e): JsonResponse
     {
-        return parent::render($request, $exception);
+        if ($e instanceof QueryException) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Database error occurred!',
+                'data' => [],
+            ], Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
+
+        return response()->json([
+            'success' => false,
+            'message' => $e->getMessage(),
+            'data' => [],
+        ], Response::HTTP_INTERNAL_SERVER_ERROR);
     }
 }

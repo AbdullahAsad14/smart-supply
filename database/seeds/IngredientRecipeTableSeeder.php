@@ -17,13 +17,31 @@ class IngredientRecipeTableSeeder extends Seeder
             [
                 'ingredient_id' => 1,
                 'recipe_id' => 1,
-                'amount' => 2,
+                'amount' => 1.00,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ], [
+                'ingredient_id' => 2,
+                'recipe_id' => 1,
+                'amount' => 100.00,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ], [
+                'ingredient_id' => 1,
+                'recipe_id' => 2,
+                'amount' => 0.50,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ], [
+                'ingredient_id' => 2,
+                'recipe_id' => 2,
+                'amount' => 100.00,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ], [
                 'ingredient_id' => 3,
                 'recipe_id' => 2,
-                'amount' => 5.5,
+                'amount' => 3.00,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]
