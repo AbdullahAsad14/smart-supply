@@ -21,6 +21,6 @@ class Recipe extends Model
     {
         return $this->belongsToMany(Ingredient::class)
             ->using(IngredientRecipe::class)
-            ->withPivot('amount');;
+            ->withPivot('amount');
     }
 }
